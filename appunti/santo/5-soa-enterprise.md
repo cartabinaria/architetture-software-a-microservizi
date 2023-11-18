@@ -1,3 +1,5 @@
+# 5. SOA Enterprise
+
 È tipicamente progettata in maniera top-down con unico stack tecnologico (come Java EE o Dot.net). Usa SOAP. Ha una governance definita. Dal punto tecnico si fanno affidamento su componenti come l'ESB.
 
 Il documento OASIS SOA RM è un reference model definito da un ente che gestisce le politiche di gestione: la definizione di essa (devo essere fatte valere, quindi bisogna verificarla/misurarla), identificazione del responsabile, verifica che vengano attuate (tecnicamente misurabili o con una forma di review fatta da persone).
@@ -24,13 +26,13 @@ Si modella con un approccio basato sui processi (grazie BPMN).
 Specifica caratteristiche strutturati e funzionali di un servizio nel medesimo modo in cui sono esposti ai consumatori. Si identificano servizi, requisiti e dipendenze, oltre che le politiche.
 È sia un profilo (si può usare il modellatore UML classico) ché un'estensione (serve uno ad-hoc) di UML. 
 
-![[20231009095049.png|300]]
+![20231009095049.png](static/20231009095049.png)
 
 le interfacce sono necessarie e si vedono come vengono relazionati i servizi. Dentro `ServiceInterface` si vede il ruolo delle relazioni (consumatore/produttore in questo caso). Questa relazione è la definizione di coreografie. 
 
 I diagrammi di sequenza sono avanzati abbastanza da essere usati per le coreografie.
-![[20231009095409.png|300]]
-![[20231009095454.png|500]]
+![20231009095409.png](static/20231009095409.png)
+![20231009095454.png](static/20231009095454.png)
 
 si ha però una meno espressività rispetto a quanto visto su BPMN.
 L'idea di SoaML è dunque di mettere insieme l'aspetto strutturale e allo stesso tempo definire come comunicano i partner.
@@ -50,11 +52,11 @@ Proprietaria di IBM: ipertesto che definisce cosa fa ogni attività, cos'è un a
 4. realizzazione.
 
 Ad ogni processo si cerca di associare un task service (servizio al alto livello che espongono un intero processo come capability).
-![[20231009102434.png|500]]
+![20231009102434.png](static/20231009102434.png)
 
 Ogni messaggio in entrata è una nuova operazione. 
 
 Una lane è una risorsa dell'organizzazione, dunque si può fare una per ogni servizio e spostare le operazioni nella lane corrispondente. Oppure non si fa nulla e si vede solo come comunica usando i pool.
 
-![[20231009102858.png|500]]
+![20231009102858.png](static/20231009102858.png)
 

@@ -1,3 +1,5 @@
+# 6. Container
+
 Leggeri e con tempi di installazioni più brevi, i container sono molto usati nei microservizi. Un container è una partizione isolata dell'OS: un'astrazione per accedere alle risorse fisiche della macchina (CPU, RAM, ...). Inoltre gestisce l'isolamento delle risorse per ogni processo. I container dipendono da questo supporto.
 
 Negli ambienti virtualizzati vi è un **hypervisor** che si occupa della gestione e di far comunicare bene l'OS con la VM, anche se, a volte, la VM stessa riesce a collaborare bene con l'OS. Dentro ogni VM si replica l'intero stack dell'ambiente, quindi nuovo OS, librerie di sistema e app.

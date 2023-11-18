@@ -1,3 +1,5 @@
+# 10. Servizi di comunicazione
+
 ## Stili di comunicazione
 Servizi che dentro un'applicazione vogliono comunicare fra di loro lo possono fare usando due diversi stili in base al suo indirizzamento:
 - Esplicito: prendi l'indirizzo e scambi messaggi, RPC (Remote Procedure Call). Si fa in modo sync (richiesta e risposta effettuai sullo stesso canale di comunicazione) o async (la risposta usa un canale di comunicazione diverso, vedesi richieste che attivano procedure di calcolo lunghe). Un altro modo è l'uso dello streaming: si apre un unico canale di comunicazione in cui si fanno più richieste e/o più risposte (eg: ogni secondo una risposta per la temperatura di un luogo). 
@@ -11,7 +13,7 @@ Si hanno dei componenti ben identificati: producer e consumer. Essi sono disacco
 ### Message broker
 Vi sono diverse architetture su come costruirlo in base a garanzie, distribuzioni o altro.
 
-![[20231030101011.png]]
+![20231030101011.png](static/20231030101011.png)
 
 ## REST
 Stile architetturale che definisce insieme di componenti e connettori e come questa composizione viene luogo mediante dei **vincoli**. 
@@ -28,7 +30,7 @@ Stile architetturale che definisce insieme di componenti e connettori e come que
 Un load balancer è un gateway, il proxy invece è esplicitato dal client.
 
 Il web soddisfa questi vincoli architetturali.
-![[20231030102606.png|300]]
+![20231030102606.png](static/20231030102606.png)
 
 Richardson Maturity Model definisce quanto un'applicazione fa effettivamente uso di REST. 
 0. Tutti i modelli che usano HTTP, come SOAP, sono solo al livello 0.
@@ -45,7 +47,7 @@ REST si può usare in SOA ma non fa quello per cui è così diffuso perché i cl
 #### Modello richiesta/risposta
 Rimanendo in ambiente RESTful, e quindi niente web socket, si possono fare le web hook in cui ci si registra ad un service provider per un determinato servizio. Questo viene gestito mediante meccanismi asincroni. Si registra un proprio endpoint ad esempio "quando arriva un determinato ordine avvisami" e lì il server tramite anche meccanismi pub/sub gestisce la cosa e il client pertanto deve essere capace di ricevere messaggi mettendo su un piccolo "server HTTP".
 Il dialogo richiesta-risposta può essere rappresentato in BPMN come
-![[20231106092934.png|500]]
+![20231106092934.png](static/20231106092934.png)
 
 e qui si può gestire anche il tempo di risposta. Nel caso di richieste lunghe si può, per l'appunto, gestire due transazioni con sistema web-hook con piccolo server HTTP nel client (caso più diffuso).
 
@@ -131,6 +133,6 @@ Apache Thrift ha un meccanismo di RPC (dunque serializza i binari dei dati e rie
 
 ### gRPC
 In un architettura a microservizi è molto comodo usare questo tipo, al posto di REST. Attraverso Protocol buffer si garantisce efficienza della trasmissione dei dati. Si basa su HTTP/2, ma usando stesso canale su transazioni diverse esso fa incartare molti load balancer. Supporta meccanismi di streaming bidirezionali.
-![[20231106102918.png|500]]
+![20231106102918.png](static/20231106102918.png)
 
 Nel caso di streaming una richiesta può essere seguita da più risposte non temporalmente vicino.

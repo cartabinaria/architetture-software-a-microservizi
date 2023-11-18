@@ -1,3 +1,5 @@
+# 9. Coreografie
+
 Serve per far comunicare diverse parti. Una coreografia descrive come avviene lo scambio di messaggi dal punto di vista globale.
 Esse sono astrazioni: si concentrano su quali messaggi vengono scambiati. In un qualche momento un partecipante $A$ manda ad un partecipante $B$ qualche messaggio $m$. $B$ si aspetta tale messaggio!
 Le coreografie non definisco le computazioni locali o quali vengono inviati.

@@ -1,6 +1,8 @@
+# 8. SOAP
+
 Lo standard dei servizi web, un supporto all'esecuzione dell'applicazione, sfrutta SOAP.
 L'architettura in parte ancora mantenuta è data da:
-![[20231027144323.png|300]]
+![20231027144323.png](static/20231027144323.png)
 
 Il service provider è il server che mette online l'app (eg: Google con Maps).
 Il service requestor è chi fa la richiesta al servizio (eg: l'utente che accede a Maps).

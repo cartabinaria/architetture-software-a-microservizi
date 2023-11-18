@@ -1,3 +1,5 @@
+# 3. Sistemi distribuiti
+
 È una rete di endpoint che calcolano comunicando fra di loro mediante scambio di messaggi. È un sistema distribuito in grandi distanze geografiche, ma la distanza è relativa: due processi nel proprio PC che comunicano a scambio di messaggi potrebbero avere i medesimi errori se fatti in larga scala.
 L'approccio a servizi è nato per l'interazione omogenea fra aziende.
 

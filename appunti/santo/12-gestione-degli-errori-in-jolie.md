@@ -1,3 +1,5 @@
+# 12. Gestione degli errori in Jolie
+
 Vi sono diversi tipi di handler per i fault.
 - Fault: classico stile try-catch;
 - Termination: utile nel caso di processo parallelo, uccidendo in modo "smooth" per tornare, in qualche modo, in uno stato consistente;
